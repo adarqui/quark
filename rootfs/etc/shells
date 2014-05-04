@@ -1,0 +1,5 @@
+# /etc/shells: valid login shells
+/bin/sh
+/usr/bin/rc
+/bin/bash
+/bin/rbash

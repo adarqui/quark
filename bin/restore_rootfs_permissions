@@ -1,0 +1,20 @@
+#!/bin/bash
+
+fatal() {
+	echo "FATAL: " $@
+	exit 1
+}
+
+chownmod() {
+	chown "$3"."$4" "$1"
+	chmod "$2" "$1"
+}
+
+if [ ! -f metadata/perms.txt ] ; then
+	fatal "metadata/perms.txt not found"
+fi
+
+
+while read l; do
+	chownmod $l
+done < metadata/perms.txt

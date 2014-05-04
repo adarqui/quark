@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ ! -L "$1" ] ; then
+	echo "$1 `stat -c "%a %u %g" $1`"
+fi

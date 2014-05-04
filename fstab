@@ -1,0 +1,1 @@
+/data/xsec /var/lib/lxc/quark/rootfs/xsec_build none bind 0 0

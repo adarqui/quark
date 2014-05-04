@@ -1,0 +1,6 @@
+TARGETS = killprocs bootlogs ssh single stop-bootlogd rmnologin rc.local
+INTERACTIVE =
+single: killprocs bootlogs
+stop-bootlogd: bootlogs ssh
+rmnologin: bootlogs ssh
+rc.local: bootlogs ssh
